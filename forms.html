@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        table{
+            padding: 20px;
+            border: solid black 2px;
+            margin-left: 500px;
+            margin-top: 150px;
+            height: 500px;
+            width: 500px;
+
+        }
+        h2{
+            text-align: center;
+            background-color: blanchedalmond;
+            color: black;
+            font-family: cursive;
+            padding: 10px;
+            border-radius: 20px;
+            width: 500px;
+            margin-left: 500px;
+        }
+        button{
+            height: 30px;
+            width: 80px;
+            margin-left: 100px;
+            margin-top: 20px;
+            background-color: bisque;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+        }
+        button:hover{
+            background-color: cadetblue;
+        }
+        input{
+            height: 30px;
+            width: 300px;
+            border-radius: 10px;
+            border: solid plum 1px;
+            padding: 5px;
+        }
+        textarea{
+            height: 30px;
+            width: 300px;
+            border-radius: 10px;
+            border: solid plum 1px;
+            padding: 5px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h2>Fill the basic details</h2>
+    <form id="userform" action="display.html" method="GET">
+        <table>
+            <tr>
+                <td>First Name :</td>
+                <td><input type="text" name="fname" required placeholder="enter tour first name"></td>
+            </tr>
+            <tr>
+                <td>Last Name :</td>
+                <td><input type="text"name="lname" required placeholder="enter your last name"></td>
+            </tr>
+            <tr>
+                <td>Age :</td>
+                <td><input type="text"name="age" required placeholder="enter your age"></td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td><input type="email"name="mail" required placeholder="enter your mail"></td>
+            </tr>
+            <tr>
+                <td>Contact No :</td>
+                <td><input type="text"name="contact" required placeholder="enter your contact number"></td>
+            </tr>
+            <tr>
+                <td>Father's Name :</td>
+                <td><input type="text"name="f_name" required placeholder="enter your father's name"></td>
+            </tr>
+            <tr>
+                <td>Father's Contact No:</td>
+                <td><input type="text"name="f_contact" required placeholder="enter your father's contact no"></td>
+            </tr>
+            <tr>
+                <td>Mother's Name :</td>
+                <td><input type="text"name="m_name" required placeholder="enter your mother's name"></td>
+            </tr>
+            <tr>
+                <td>Mother's Contact No :</td>
+                <td><input type="text"name="m_contact" required placeholder="enter your mother's contact no"></td>
+            </tr>
+            <tr>
+                <td>Address :</td>
+                <td>
+                    <textarea placeholder="enter your address" name="address" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>Pincode:</td>
+                <td><input type="text"name="code" required placeholder="enter your pincode"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

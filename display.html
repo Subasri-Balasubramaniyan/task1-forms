@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User details</title>
+</head>
+<body>
+    <h2>User Submitted details</h2>
+    <div id="output"></div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        const outputDiv = document.getElementById('output');
+
+        const fields = [
+            { label: "First Name", name: "fname" },
+            { label: "Last Name", name: "lname" },
+            { label: "Age", name: "age" },
+            { label: "Email", name: "mail" },
+            { label: "Contact No", name: "contact" },
+            { label: "Father's Name", name: "f_name" },
+            { label: "Father's Contact No", name: "f_contact" },
+            { label: "Mother's Name", name: "m_name" },
+            { label: "Mother's Contact No", name: "m_contact" },
+            { label: "Address", name: "address" },
+            { label: "Pincode", name: "code" }
+        ];
+
+        let html = "<ul>";
+        fields.forEach(field => {
+            const value = params.get(field.name);
+            html += `<li><strong>${field.label}:</strong> ${value}</li>`;
+        });
+        html += "</ul>";
+
+        outputDiv.innerHTML = html;
+        </script>
+</body>
+</html>
